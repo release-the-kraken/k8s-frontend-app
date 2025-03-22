@@ -1,0 +1,9 @@
+.container{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.mat-card{
+  padding-top: 20px;
+  background-color: azure;
+}
