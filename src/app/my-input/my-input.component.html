@@ -1,6 +1,6 @@
 <div class="container">
-  <mat-card class="mat-card row col-6 offset-3">
-    <mat-form-field class="col-6 offset-3" appearance="fill">
+  <mat-card class="mat-card mat-elevation-z8 row col-6 offset-3">
+    <mat-form-field class="col-6 offset-3">
       <mat-label>Type your word</mat-label>
       <input
         type="text"
@@ -8,5 +8,16 @@
         [(ngModel)]="word.word"
         />
     </mat-form-field>
+    <div class="submit-button-row">
+      <button
+      type="submit"
+      class="submit-button"
+      mat-flat-button
+      color="primary"
+      (click)="handleSubmit()"
+      >
+        Submit
+      </button>
+    </div>
   </mat-card>
 </div>

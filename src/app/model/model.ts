@@ -1,3 +1,4 @@
 export type Word = {
-  word: string;
+  id: number
+  word: string
 }

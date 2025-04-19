@@ -5,5 +5,11 @@
 }
 .mat-card{
   padding-top: 20px;
+  padding-bottom: 10px;
   background-color: azure;
+}
+
+.submit-button-row {
+  display: flex;
+  flex-direction: row-reverse;
 }
