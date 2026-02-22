@@ -7,7 +7,7 @@ import { Word } from '../model/model';
   providedIn: 'root'
 })
 export class CommonService {
-  private BASE_URL: string = "http://localhost:8080"
+  private BASE_URL: string = "k8s-app-backend"
   private API_VERSION: string = "/v1"
   private CREATE_PATH: string = "/save"
 

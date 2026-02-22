@@ -1,11 +1,14 @@
-FROM node:alpine
+# stage 1
+FROM node:alpine AS build
 WORKDIR /app
-COPY . /app
+COPY . .
 
-RUN npm install -g @angular/cli@17.3.13
+RUN npm ci
 
-RUN npm install
+RUN npm run build
 
-EXPOSE 4200
+# stage 2
+FROM nginx:latest
 
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /app/dist/k8s-frontend-app/browser /usr/share/nginx/html
